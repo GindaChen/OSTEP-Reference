@@ -21,4 +21,19 @@ for file in files:
 		print(e)
 		exit(1)
 
-print(datas)
+for k, v in datas.items():
+	row_cnt = len(v)
+	name = k.strip('.tsv')
+	datas[k]['Chapter'] = [name for _ in range(row_cnt)]
+
+
+final_df = pd.concat([v for k, v in datas.items()], ignore_index=True)
+final_df = final_df.apply(lambda x: x.str.strip() if x.dtype == "str" else x)
+
+# Rearrange Columns
+cols = list(df.columns.values)
+cols.remove('Chapter')
+cols.insert(0, 'Chapter')
+final_df = final_df[cols]
+final_df = final_df.sort_values('Chapter')
+final_df.to_csv('all.tsv', sep='\t', index=False)
