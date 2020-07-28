@@ -1,0 +1,23 @@
+[AA06] “A Comparison of Software and Hardware Techniques for x86 Virtualization” by Keith Adams and Ole Agesen. ASPLOS ’06, San Jose, California. A terriﬁc paper from two VMware engineers about the surprisingly small beneﬁts of having hardware support for virtualization. Also an excellent general discussion about virtualization in VMware, including the crazy binary-translation tricks they have to play in order to virtualize the difﬁcult-to-virtualize x86 platform.
+
+[AD+01] “Information and Control in Gray-box Systems” by Andrea C. Arpaci-Dusseau and Remzi H. Arpaci-Dusseau. SOSP ’01, Banff, Canada. Our own work on how to infer information and even exert control over the OS from application level, without change to the OS. The best example therein: determining which ﬁle blocks are cached using a probabilistic probe-based technique; doing so allows applications to better utilize the cache, by ﬁrst scheduling work that will result in hits.
+
+[B00] “FreeBSD Developers’ Handbook: Chapter 11 x86 Assembly Language Programming” http://www.freebsd.org/doc/en/books/developers-handbook/. A nice tutorial on system calls and such in the BSD developers handbook.
+
+[BD+03] “Xen and the Art of Virtualization” by Paul Barham, Boris Dragovic, Keir Fraser, Steven Hand, Tim Harris, Alex Ho, Rolf Neugebauer, Ian Pratt, Andrew Warﬁeld. SOSP ’03, Bolton Landing, New York. The paper that shows that with para-virtualized systems, the overheads of virtualized systems can be made to be incredibly low. So successful was this paper on the Xen virtual machine monitor that it launched a company.
+
+[B+97] “Disco: Running Commodity Operating Systems on Scalable Multiprocessors” by Edouard Bugnion, Scott Devine, Kinshuk Govil, Mendel Rosenblum. SOSP ’97. The paper that reintroduced the systems community to virtual machine research; well, perhaps this is unfair as Bressoud and Schneider [BS95] also did, but here we began to understand why virtualization was going to come back. What made it even clearer, however, is when this group of excellent researchers started VMware and made some billions of dollars.
+
+[B+17] “Hardware and Software Support for Virtualization” by Edouard Bugnion, Jason Nieh, Dan Tsafrir. Morgan and Claypool, 2017. Undoubtedly the best place to get the latest on how virtualization works in modern systems. Unfortunately, you’ll have to read a short book to ﬁgure it out!
+
+[BS95] “Hypervisor-based Fault-tolerance” by Thomas C. Bressoud, Fred B. Schneider. SOSP ’95. One the earliest papers to bring back the hypervisor, which is just another term for a virtual machine monitor. In this work, however, such hypervisors are used to improve system tolerance of hardware faults, which is perhaps less useful than some of the more practical scenarios discussed in this chapter; however, still quite an intriguing paper in its own right.
+
+[G74] “Survey of Virtual Machine Research” by R.P. Goldberg. IEEE Computer, Volume 7, Number 6. A terriﬁc survey of a lot of old virtual machine research.
+
+[SVL01] “Virtualizing I/O Devices on VMware Workstation’s Hosted Virtual Machine Monitor” by Jeremy Sugerman, Ganesh Venkitachalam and Beng-Hong Lim. USENIX ’01, Boston, Massachusetts. Provides a good overview of how I/O works in VMware using a hosted architecture which exploits many native OS features to avoid reimplementing them within the VMM.
+
+[V98] by VMware corporation. Available: http://www.vmware.com/. This may be the most useless reference in this book, as you can clearly look this up yourself. Anyhow, the company was founded in 1998 and is a leader in the ﬁeld of virtualization.
+
+[S+03] “Semantically-Smart Disk Systems” by Muthian Sivathanu, Vijayan Prabhakaran, Florentina I. Popovici, Timothy E. Denehy, Andrea C. Arpaci-Dusseau, Remzi H. Arpaci-Dusseau. FAST ’03, San Francisco, California, March 2003. Our work again, this time showing how a dumb block-based device can infer much about what the ﬁle system above it is doing, such as deleting a ﬁle. The technology used therein enables interesting new functionality within a block device, such as secure delete, or more reliable storage.
+
+[WSG02] “Scale and Performance in the Denali Isolation Kernel” by Andrew Whitaker, Marianne Shaw, and Steven D. Gribble. OSDI ’02, Boston, Massachusetts. The paper that introduces the term para-virtualization. Although one can argue that Bugnion et al. [B+97] introduce the idea of para-virtualization in the Disco paper, Whitaker et al. take it further and show how the idea can be more general than what was thought before.

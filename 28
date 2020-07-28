@@ -1,0 +1,31 @@
+[D91] “Just Win, Baby: Al Davis and His Raiders” by Glenn Dickey. Harcourt, 1991. The book about Al Davis and his famous quote. Or, we suppose, the book is more about Al Davis and the Raiders, and not so much the quote. To be clear: we are not recommending this book, we just needed a citation.
+
+[D+13] “Everything You Always Wanted to Know about Synchronization but Were Afraid to Ask” by Tudor David, Rachid Guerraoui, Vasileios Trigonakis. SOSP ’13, Nemacolin Woodlands Resort, Pennsylvania, November 2013. An excellent paper comparing many different ways to build locks using hardware primitives. Great to see how many ideas work on modern hardware.
+
+[D68] “Cooperating sequential processes” by Edsger W. Dijkstra. 1968. Available online here: http://www.cs.utexas.edu/users/EWD/ewd01xx/EWD123.PDF. One of the early seminal papers. Discusses how Dijkstra posed the original concurrency problem, and Dekker’s solution.
+
+[H93] “MIPS R4000 Microprocessor User’s Manual” by Joe Heinrich. Prentice-Hall, June 1993. Available: http://cag.csail.mit.edu/raw/documents/R4400 Uman book Ed2.pdf. The old MIPS user’s manual. Download it while it still exists.
+
+[H91] “Wait-free Synchronization” by Maurice Herlihy. ACM TOPLAS, Volume 13: 1, January 1991. A landmark paper introducing a different approach to building concurrent data structures. Because of the complexity involved, some of these ideas have been slow to gain acceptance in deployment.
+
+[L81] “Observations on the Development of an Operating System” by Hugh Lauer. SOSP ’81, Paciﬁc Grove, California, December 1981. A must-read retrospective about the development of the Pilot OS, an early PC operating system. Fun and full of insights.
+
+[L09] “glibc 2.9 (include Linux pthreads implementation)” by Many authors.. Available here: http://ftp.gnu.org/gnu/glibc. In particular, take a look at the nptl subdirectory where you will ﬁnd most of the pthread support in Linux today.
+
+[M82] “The Architecture of the Burroughs B5000: 20 Years Later and Still Ahead of the Times?” by A. Mayer. 1982. Available: www.ajwm.net/amayer/papers/B5000.html. “It (RDLK) is an indivisible operation which reads from and writes into a memory location.” RDLK is thus testand-set! Dave Dahm created spin locks (“Buzz Locks”) and a two-phase lock called “Dahm Locks.”
+
+[M15] “OSSpinLock Is Unsafe” by J. McCall. mjtsai.com/blog/2015/12/16/osspinlock -is-unsafe. Calling OSSpinLock on a Mac is unsafe when using threads of different priorities – you might spin forever! So be careful, Mac fanatics, even your mighty system can be less than perfect...
+
+[MS91] “Algorithms for Scalable Synchronization on Shared-Memory Multiprocessors” by John M. Mellor-Crummey and M. L. Scott. ACM TOCS, Volume 9, Issue 1, February 1991. An excellent and thorough survey on different locking algorithms. However, no operating systems support is used, just fancy hardware instructions.
+
+[P81] “Myths About the Mutual Exclusion Problem” by G.L. Peterson. Information Processing Letters, 12(3), pages 115–116, 1981. Peterson’s algorithm introduced here.
+
+[R97] “What Really Happened on Mars?” by Glenn E. Reeves. research.microsoft.com/ en-us/um/people/mbj/Mars Pathfinder/Authoritative Account.html. A description of priority inversion on Mars Pathﬁnder. Concurrent code correctness matters, especially in space!
+
+[S05] “Guide to porting from Solaris to Linux on x86” by Ajay Sood, April 29, 2005. Available: http://www.ibm.com/developerworks/linux/library/l-solar/.
+
+[S09] “OpenSolaris Thread Library” by Sun.. Code: src.opensolaris.org/source/xref/ onnv/onnv-gate/usr/src/lib/libc/port/threads/synch.c. Pretty interesting, although who knows what will happen now that Oracle owns Sun. Thanks to Mike Swift for the pointer.
+
+[W09] “Load-Link, Store-Conditional” by Many authors.. en.wikipedia.org/wiki/LoadLink/Store-Conditional. Can you believe we referenced Wikipedia? But, we found the information there and it felt wrong not to. Further, it was useful, listing the instructions for the different architectures: ldl l/stl c and ldq l/stq c (Alpha), lwarx/stwcx (PowerPC), ll/sc (MIPS), and ldrex/strex (ARM). Actually Wikipedia is pretty amazing, so don’t be so harsh, OK?
+
+[WG00] “The SPARC Architecture Manual: Version 9” by D. Weaver, T. Germond. SPARC International, 2000. http://www.sparc.org/standards/SPARCV9.pdf. See developers. sun.com/solaris/articles/atomic sparc/ for more on atomics.
