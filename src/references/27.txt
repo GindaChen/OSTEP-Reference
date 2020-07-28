@@ -1,9 +1,0 @@
-[B89] “An Introduction to Programming with Threads” by Andrew D. Birrell. DEC Technical Report, January, 1989. Available: https://birrell.org/andrew/papers/035-Threads.pdf A classic but older introduction to threaded programming. Still a worthwhile read, and freely available.
-
-[B97] “Programming with POSIX Threads” by David R. Butenhof. Addison-Wesley, May 1997. Another one of these books on threads.
-
-[B+96] “PThreads Programming: by A POSIX Standard for Better Multiprocessing. ” Dick Buttlar, Jacqueline Farrell, Bradford Nichols. O’Reilly, September 1996 A reasonable book from the excellent, practical publishing house O’Reilly. Our bookshelves certainly contain a great deal of books from this company, including some excellent offerings on Perl, Python, and Javascript (particularly Crockford’s “Javascript: The Good Parts”.)
-
-[K+96] “Programming With Threads” by Steve Kleiman, Devang Shah, Bart Smaalders. Prentice Hall, January 1996. Probably one of the better books in this space. Get it at your local library. Or steal it from your mother. More seriously, just ask your mother for it – she’ll let you borrow it, don’t worry.
-
-[X+10] “Ad Hoc Synchronization Considered Harmful” by Weiwei Xiong, Soyeon Park, Jiaqi Zhang, Yuanyuan Zhou, Zhiqiang Ma. OSDI 2010, Vancouver, Canada. This paper shows how seemingly simple synchronization code can lead to a surprising number of bugs. Use condition variables and do the signaling correctly!
