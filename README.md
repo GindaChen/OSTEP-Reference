@@ -1,2 +1,2 @@
 # OSTEP-Reference
-The list references in OSTEP. Helps if someone really wants to read them all.
+The list references in [OSTEP](http://ostep.org/).
